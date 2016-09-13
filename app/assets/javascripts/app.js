@@ -1,5 +1,5 @@
 angular
-    .module('app', ['templates', 'ui.router'])
+    .module('app', ['templates', 'ui.router', 'ng-token-auth'])
     .config(function($urlRouterProvider, $stateProvider) {
       var homeState = {
           name: 'home',
