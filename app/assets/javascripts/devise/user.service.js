@@ -1,9 +1,13 @@
-function UserService($http){
+function UserService($auth){
 
   var vm = this;
 
   vm.postLogin = function(loginParams){
-    console.log(loginParams);
+    $auth.submitLogin('/sign_in', {email: loginParams.email, password: loginParams.password}).then(function(response){
+      console.log(response);
+    }).catch(function(response){
+      console.log(response);
+    })
   }
 
 }

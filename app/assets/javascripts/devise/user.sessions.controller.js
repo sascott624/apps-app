@@ -4,7 +4,7 @@ function UserSessionsController(UserService){
 
   vm.login = {
     email: '',
-    password: ''
+    password: '',
   }
 
   vm.loginUser = function(login){
