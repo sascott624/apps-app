@@ -1,10 +1,11 @@
-function UserService($auth){
+function UserService($auth, $state){
 
   var vm = this;
 
   vm.postLogin = function(loginParams){
     $auth.submitLogin({email: loginParams.email, password: loginParams.password}).then(function(response){
       console.log(response);
+      $state.go('home');
     }).catch(function(response){
       console.log(response);
     })

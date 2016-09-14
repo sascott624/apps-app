@@ -7,6 +7,16 @@ angular
           templateUrl: 'home/home.html',
           controller: 'HomeController as vm'
         })
+        .state('welcome', {
+          url: '/welcome',
+          templateUrl: 'home/welcome.html',
+          controller: 'WelcomeController as vm',
+          resolve: {
+            auth: function($auth){
+              return $auth.validateUser();
+            }
+          }
+        })
         .state('sign-in', {
           url: '/sign-in',
           templateUrl: 'devise/views/signin.html',
