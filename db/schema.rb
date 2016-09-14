@@ -10,10 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20160913182638) do
-
-=======
 ActiveRecord::Schema.define(version: 20160913190830) do
 
   create_table "companies", force: :cascade do |t|
@@ -59,6 +55,5 @@ ActiveRecord::Schema.define(version: 20160913190830) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
     t.index ["uid", "provider"], name: "index_users_on_uid_and_provider", unique: true
   end
->>>>>>> authentication
 
 end
