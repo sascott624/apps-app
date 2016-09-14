@@ -1,5 +1,9 @@
 angular
+<<<<<<< HEAD
     .module('app', ['templates', 'ui.router'])
+=======
+    .module('app', ['templates', 'ui.router', 'ng-token-auth'])
+>>>>>>> authentication
     .config(function($httpProvider) {
 
         // for CSRF errors
@@ -8,6 +12,9 @@ angular
         $httpProvider.defaults.headers.patch = {
           'Content-Type': 'application/json;charset=utf-8'
         };
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> authentication
     });
