@@ -1,4 +1,15 @@
-function UserSessionsController(){
+function UserSessionsController(UserService){
+
+  var vm = this;
+
+  var login = {
+    email: '',
+    password: ''
+  }
+
+  var loginUser = function(login){
+    UserService.postLogin(login)
+  }
 
 }
 

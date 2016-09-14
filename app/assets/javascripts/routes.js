@@ -9,7 +9,7 @@ angular
         })
         .state('sign_in', {
           url: '/sign_in',
-          templateUrl: 'devise/views/user_sessions/new.html',
+          templateUrl: 'devise/views/new.html',
           controller: 'UserSessionsController as vm'
         })
         $urlRouterProvider.otherwise('home');
