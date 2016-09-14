@@ -1,7 +1,11 @@
-function WelcomeController(auth){
+function WelcomeController(UserService, auth){
   var vm = this;
 
   vm.user = auth;
+
+  vm.logout = function(){
+    UserService.signout();
+  }
 }
 
 angular
