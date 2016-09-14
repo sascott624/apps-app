@@ -1,0 +1,28 @@
+<form name='signup-form'>
+  <input
+    type="text"
+    name='email'
+    ng-model='vm.signup.email'
+    required='required'
+    placeholder="Email"
+  >
+
+  <input
+    type="password"
+    name='password'
+    ng-model='vm.signup.password'
+    required='required'
+    placeholder="Password"
+  >
+
+  <input
+    type="password"
+    name='password'
+    ng-model='vm.signup.passwordConfirmation'
+    required='required'
+    placeholder="ConfirmPassword"
+  >
+
+  <button ng-click='vm.signupUser(vm.signup)'>Sign Up</button>
+
+</form>

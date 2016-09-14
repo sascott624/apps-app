@@ -7,8 +7,18 @@ function UserSessionsController(UserService){
     password: '',
   }
 
+  vm.signup = {
+    email: '',
+    password: '',
+    passwordConfirmation: '',
+  }
+
   vm.loginUser = function(login){
-    UserService.postLogin(login)
+    UserService.postLogin(login);
+  }
+
+  vm.signupUser = function(signup){
+    UserService.postSignup(signup);
   }
 
 }
