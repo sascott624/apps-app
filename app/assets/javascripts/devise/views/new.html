@@ -4,15 +4,17 @@
     name='email'
     ng-model='vm.login.email'
     required='required'
+    placeholder="Email"
   >
 
   <input
-    type="text"
+    type="password"
     name='password'
     ng-model='vm.login.password'
     required='required'
+    placeholder="Password"
   >
 
-  <button ng-click='vm.loginUser(login)'>Login</button>
+  <button ng-click='vm.loginUser(vm.login)'>Login</button>
 
 </form>
