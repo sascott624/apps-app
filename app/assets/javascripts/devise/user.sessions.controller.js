@@ -1,4 +1,4 @@
-function UserSessionsController(UserService){
+function UserSessionsController(UserService, $state){
 
   var vm = this;
 
@@ -14,7 +14,9 @@ function UserSessionsController(UserService){
   }
 
   vm.loginUser = function(login){
-    UserService.postLogin(login);
+    UserService.postLogin(login).then(function(response){
+      $state.go('welcome');
+    };
   }
 
   vm.signupUser = function(signup){
