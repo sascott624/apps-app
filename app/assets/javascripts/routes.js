@@ -7,9 +7,14 @@ angular
           templateUrl: 'home/home.html',
           controller: 'HomeController as vm'
         })
-        .state('sign_in', {
-          url: '/sign_in',
-          templateUrl: 'devise/views/new.html',
+        .state('sign-in', {
+          url: '/sign-in',
+          templateUrl: 'devise/views/signin.html',
+          controller: 'UserSessionsController as vm'
+        })
+        .state('sign-up', {
+          url: '/sign-up',
+          templateUrl: 'devise/views/signup.html',
           controller: 'UserSessionsController as vm'
         })
         $urlRouterProvider.otherwise('home');
