@@ -4,6 +4,7 @@ class CreateInterviews < ActiveRecord::Migration[5.0]
       t.datetime :date
       t.string :type
       t.string :notes
+      t.string :connection_id
     end
   end
 end

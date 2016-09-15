@@ -20,33 +20,39 @@ ActiveRecord::Schema.define(version: 20160915193737) do
   end
 
   create_table "connections", force: :cascade do |t|
-    t.string "notes"
+    t.string  "notes"
+    t.integer "user_id"
+    t.integer "contact_id"
   end
 
   create_table "contacts", force: :cascade do |t|
-    t.string "first_name"
-    t.string "last_name"
-    t.string "title"
-    t.string "email"
-    t.string "phone"
-    t.string "notes"
+    t.string  "first_name"
+    t.string  "last_name"
+    t.string  "title"
+    t.string  "email"
+    t.string  "phone"
+    t.string  "notes"
+    t.integer "company_id"
   end
 
   create_table "emails", force: :cascade do |t|
     t.datetime "date"
     t.string   "notes"
+    t.string   "connection_id"
   end
 
   create_table "interviews", force: :cascade do |t|
     t.datetime "date"
     t.string   "type"
     t.string   "notes"
+    t.string   "connection_id"
   end
 
   create_table "meetups", force: :cascade do |t|
     t.datetime "date"
     t.string   "type"
     t.string   "notes"
+    t.string   "connection_id"
   end
 
   create_table "users", force: :cascade do |t|
