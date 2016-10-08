@@ -7,6 +7,16 @@ angular
           templateUrl: 'home/home.html',
           controller: 'HomeController as vm'
         })
+        .state('sign-in', {
+          url: '/sign-in',
+          templateUrl: 'devise/views/signin.html',
+          controller: 'UserSessionsController as vm'
+        })
+        .state('sign-up', {
+          url: '/sign-up',
+          templateUrl: 'devise/views/signup.html',
+          controller: 'UserSessionsController as vm'
+        })
         .state('welcome', {
           url: '/welcome',
           templateUrl: 'home/welcome.html',
@@ -17,15 +27,17 @@ angular
             }
           }
         })
-        .state('sign-in', {
-          url: '/sign-in',
-          templateUrl: 'devise/views/signin.html',
-          controller: 'UserSessionsController as vm'
+        .state('welcome.companies', {
+          url: '/companies',
+          controller: 'WelcomeController as vm'
         })
-        .state('sign-up', {
-          url: '/sign-up',
-          templateUrl: 'devise/views/signup.html',
-          controller: 'UserSessionsController as vm'
+        .state('welcome.contacts', {
+          url: '/contacts',
+          controller: 'WelcomeController as vm'
+        })
+        .state('welcome.connections', {
+          url: '/connections',
+          controller: 'WelcomeController as vm'
         })
         $urlRouterProvider.otherwise('home');
     });
