@@ -1,20 +1,26 @@
-<form name='login-form'>
-  <input
-    type="text"
-    name='email'
-    ng-model='vm.login.email'
-    required='required'
-    placeholder="Email"
-  >
+<h1>Sign In to the Apps App:</h1>
+<br>
 
-  <input
-    type="password"
-    name='password'
-    ng-model='vm.login.password'
-    required='required'
-    placeholder="Password"
-  >
+<form name='login-form' class="uk-form">
+  <div class="uk-form-row">
+    <input
+      type="text"
+      name='email'
+      ng-model='vm.login.email'
+      required='required'
+      placeholder="Email"
+    >
+    <br><br>
 
-  <button ng-click='vm.loginUser(vm.login)'>Login</button>
+    <input
+      type="password"
+      name='password'
+      ng-model='vm.login.password'
+      required='required'
+      placeholder="Password"
+    >
+    <br><br>
 
+    <button ng-click='vm.loginUser(vm.login)'>Login</button>
+  </div>
 </form>
