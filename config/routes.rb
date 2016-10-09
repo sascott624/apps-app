@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root to: 'apps_app#index'
 
   resources :users
+  resources :companies
 end

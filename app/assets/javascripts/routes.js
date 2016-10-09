@@ -29,7 +29,7 @@ angular
         })
         .state('welcome.companies', {
           url: '/companies',
-          templateUrl: 'javascripts/companies/companies.html',
+          templateUrl: 'companies/companies.html',
           controller: 'WelcomeController as vm'
         })
         .state('welcome.contacts', {

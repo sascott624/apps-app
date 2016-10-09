@@ -170,6 +170,7 @@ PLATFORMS
 DEPENDENCIES
   angular-rails-templates
   byebug
+  devise
   devise_token_auth
   jbuilder (~> 2.5)
   jquery-rails

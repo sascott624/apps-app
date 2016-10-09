@@ -1,4 +1,4 @@
-function UserService($auth, $state){
+function UserService($auth, $state, $http){
 
   var vm = this;
 
